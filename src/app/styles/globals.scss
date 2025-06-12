@@ -1,0 +1,23 @@
+@use "./reset.scss";
+@use "./fonts.scss";
+@use "./mixins.scss" as *;
+
+body {
+  font-family: "ProximaNova", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+.main-wrapp {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+.background-dark {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}

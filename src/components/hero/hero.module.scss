@@ -1,0 +1,131 @@
+@use "../../app/styles/mixins.scss" as *;
+.hero {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 0;
+}
+.hero-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.hero-wrapp--left {
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  padding: 55px 65px 35px 25px;
+}
+.main-header {
+  font-weight: 800;
+  font-size: clamp(44px, 6vw, 104px);
+  line-height: 96%;
+  text-transform: uppercase;
+  max-width: 800px;
+
+  &--gradient {
+    background: linear-gradient(
+      54.2deg,
+      #5cd6b3 3.08%,
+      #04b8c4 3.09%,
+      #4bfa8a 98.66%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+    color: transparent;
+  }
+}
+.hero-wrapp--right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+}
+.hero-img {
+  width: 300px;
+  height: 300px;
+}
+.description-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+  gap: 50px;
+}
+.description {
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  max-width: 500px;
+}
+.expertise {
+  display: inline-block;
+  border: 1px solid #565656;
+  border-radius: 266px;
+  padding: 0 8px;
+  margin-top: 5px;
+}
+.expertise-nowrap {
+  white-space: nowrap;
+}
+.expertise-italic {
+  font-family: var(--font-baskerville), sans-serif;
+  font-style: italic;
+}
+.green-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  height: 70px;
+  width: 280px;
+  background: linear-gradient(
+    46.54deg,
+    #15bcdf -5.73%,
+    #0ddc7a 60.35%,
+    #15bcdf 101.73%
+  );
+  border-radius: 66px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.green-button-image {
+  width: 42px;
+  height: 42px;
+}
+.reviews-block {
+  margin-top: 20px;
+  font-family: var(--font-manrope), sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+  letter-spacing: 16%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #848484;
+  max-width: 180px;
+}
+.reviews-block-white {
+  font-weight: 700;
+  color: #ffffff;
+}
+.button-wrapp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
