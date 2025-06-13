@@ -30,11 +30,33 @@ export default function Header() {
                 <li>
                   <Link href="/">PROJECTS</Link>
                 </li>
-                <li>
+                <li className={st["menu-block-arrow"]}>
                   <Link href="/">ABOUT US</Link>
+                  <Image
+                    src="/arrow-menu.svg"
+                    width={5}
+                    height={5}
+                    alt="arrow"
+                    className={st["arrow-menu-img"]}
+                  />
+                  <div className={st["submenu"]}>
+                    <Link href="/">About us</Link>
+                    <Link href="/">Career Hub</Link>
+                  </div>
                 </li>
-                <li>
+                <li className={st["menu-block-arrow"]}>
                   <Link href="/">blog</Link>
+                  <Image
+                    src="/arrow-menu.svg"
+                    height={8}
+                    width={5}
+                    alt="arrow"
+                    className={st["arrow-menu-img"]}
+                  />
+                  <div className={st["submenu"]}>
+                    <Link href="/">Blog 1</Link>
+                    <Link href="/">Blog 2</Link>
+                  </div>
                 </li>
               </ul>
             </nav>
