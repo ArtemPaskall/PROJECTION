@@ -86,8 +86,8 @@ export default function Hero() {
                 <Image
                   src={"/gradient.png"}
                   alt="Hero"
-                  width={30}
-                  height={50}
+                  width={300}
+                  height={300}
                   className={st["gradient-img"]}
                 />
                 <div className={st["calendar-wrapp"]}>

@@ -25,38 +25,21 @@
   width: 295px;
   height: 295px;
 }
-.circle-wrapp--mobile {
+.circle-mobile {
   display: none;
+  padding-bottom: 20px;
 
   @media (max-width: 900px) {
     width: 300px;
     display: flex;
+
     justify-content: center;
     align-items: center;
   }
 }
-.slider-image2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 200px;
+.circle-mobile--wrapp {
+  margin: 50px auto;
 }
-.circle-swiper {
-  position: relative;
-
-  :global(.circle-slider-scrollbar) {
-    bottom: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-  }
-
-  :global(.swiper-pagination-bullet) {
-    background-color: #ffffff;
-  }
-
-  :global(.swiper-pagination-bullet-active) {
-    background-color: red;
-  }
+.slider-image2 {
+  margin: 20px 0;
 }

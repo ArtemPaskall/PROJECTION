@@ -1,4 +1,106 @@
-.way {
-  background-color: #fff;
-  height: 500px;
+@use "../../app/styles/mixins.scss" as *;
+.way-work {
+  background-color: #f9f9f9;
+
+  padding: 100px 0;
+
+  @include mobile {
+    background-color: #111;
+    padding: 50px 0;
+  }
+}
+.way-work-text-1 {
+  font-family: var(--font-inter);
+  font-weight: 700;
+  font-size: 175.92px;
+  font-size: clamp(42px, 12.5vw, 180px);
+  line-height: 120%;
+  line-height: 50%;
+  color: #1d1d1b;
+
+  @include mobile {
+    color: #fff;
+  }
+}
+.way-work-text-2 {
+  font-family: var(--font-baskerville);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(42px, 12.5vw, 180px);
+  line-height: 120%;
+}
+.way-work-description {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+
+  @include mobile {
+    display: none;
+  }
+}
+.way-work-description-bold {
+  font-weight: 800;
+}
+.first-line {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+
+  @include mobile {
+    column-gap: 10px;
+  }
+}
+.play-button {
+  position: relative;
+  top: -20px;
+  left: -50px;
+  width: 115px;
+  height: 115px;
+
+  @include mobile {
+    width: 50px;
+    height: 50px;
+
+    top: -15px;
+    left: -23px;
+  }
+}
+.way-work--right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mobile {
+    margin-left: 15vw;
+  }
+}
+.way-work-description-mobile {
+  display: none;
+  max-width: 350px;
+  margin-top: 30px;
+
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 150%;
+
+  @include mobile {
+    display: block;
+    margin-left: 15vw;
+    color: #fff;
+  }
+}
+.man-image {
+  width: 170px;
+  height: 170px;
+
+  @include mobile {
+    width: 75px;
+    height: 75px;
+  }
 }

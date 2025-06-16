@@ -1,0 +1,16 @@
+.card-block-bullet {
+  width: 10px;
+  height: 2px;
+  background: #717171;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  display: inline-block;
+  margin: 0 4px;
+  position: relative;
+  top: 530px;
+}
+
+.card-block-bullet.swiper-pagination-bullet-active {
+  background: #000;
+  opacity: 1;
+}

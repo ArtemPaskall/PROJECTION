@@ -1,0 +1,43 @@
+.form-block {
+  background-color: #f9f9f9;
+}
+.form-block-gradient {
+  color: #161616;
+  height: 700px;
+  border-radius: 25px;
+
+  background: url("/form-gradient.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.form-background {
+  width: 100%;
+}
+.form-block-background {
+  padding: 50px 0;
+  position: relative;
+}
+.form-header {
+  font-weight: 700;
+  font-size: 56px;
+  font-size: clamp(32px, 3vw, 56px);
+  line-height: 110%;
+  color: #161616;
+}
+.form-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  position: absolute;
+  top: 50px;
+  padding: 25px;
+  width: 100%;
+}
+.form-content-left {
+  flex: 0 0 calc(60% - 20px);
+}
+.form-content-right {
+  flex: 0 0 calc(40% - 20px);
+}
