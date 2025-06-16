@@ -18,6 +18,10 @@ body {
   margin: 0 auto;
 
   @include mobile {
+    padding: 0 20px;
+  }
+
+  @media (max-width: 760px) {
     padding: 0 10px;
   }
 }

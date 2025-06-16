@@ -1,10 +1,10 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "./slider.scss";
-import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Pagination } from "swiper/modules"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "./slider.scss"
+import Image from "next/image"
 
 const ImageSlider = () => {
   return (
@@ -45,7 +45,7 @@ const ImageSlider = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ImageSlider;
+export default ImageSlider

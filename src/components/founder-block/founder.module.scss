@@ -1,0 +1,87 @@
+@use "../../app/styles/mixins.scss" as *;
+
+.founder-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 20px;
+  padding: 150px 0;
+  color: #fff;
+
+  @include mobile {
+    padding: 90px 0;
+  }
+}
+.misson {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #ffffff;
+  border-radius: 366px;
+  padding: 8px 16px;
+  width: 160px;
+}
+.founder-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 0%;
+  filter: grayscale(100%);
+}
+.play-button-img {
+  position: relative;
+  top: -20px;
+  left: -30px;
+  width: 92px;
+  height: 92px;
+}
+.founder-img-wrapp {
+  margin-top: 60px;
+}
+.founder-name {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 130%;
+  margin-top: 20px;
+}
+.founder-title {
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  margin-top: 10px;
+}
+.founder-wrapp-right {
+  max-width: 650px;
+
+  @include mobile {
+    display: none;
+  }
+}
+.founder-description-text {
+  font-weight: 400;
+  // font-size: 36px;
+  font-size: clamp(23px, 4vw, 36px);
+  line-height: 120%;
+}
+.text-intended {
+  text-indent: 110px;
+
+  @include mobile {
+    text-indent: 0;
+  }
+}
+.mt20 {
+  margin-top: 20px;
+}
+.founder-text-mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}

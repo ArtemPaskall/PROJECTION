@@ -1,7 +1,7 @@
-import "@/app/styles/globals.scss";
-import st from "./hero.module.scss";
-import Image from "next/image";
-import Slider from "@/components/slider/page.jsx";
+import "@/app/styles/globals.scss"
+import st from "./hero.module.scss"
+import Image from "next/image"
+import Slider from "@/components/slider/page.jsx"
 
 export default function Hero() {
   return (
@@ -79,15 +79,15 @@ export default function Hero() {
                 <Image
                   src={"/slider-background.png"}
                   alt="Hero"
-                  width={300}
-                  height={500}
+                  width={30}
+                  height={50}
                   className={st["slider-background-img"]}
                 />
                 <Image
                   src={"/gradient.png"}
                   alt="Hero"
-                  width={300}
-                  height={500}
+                  width={30}
+                  height={50}
                   className={st["gradient-img"]}
                 />
                 <div className={st["calendar-wrapp"]}>
@@ -124,5 +124,5 @@ export default function Hero() {
         </div>
       </div>
     </div>
-  );
+  )
 }

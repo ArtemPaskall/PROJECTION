@@ -1,0 +1,62 @@
+@use "../../app/styles/mixins.scss" as *;
+
+.circle-wrapp {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 100px auto;
+
+  @media (max-width: 1440px) {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px auto;
+    max-width: 800px;
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+.circle-item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.circle {
+  width: 295px;
+  height: 295px;
+}
+.circle-wrapp--mobile {
+  display: none;
+
+  @media (max-width: 900px) {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.slider-image2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 200px;
+}
+.circle-swiper {
+  position: relative;
+
+  :global(.circle-slider-scrollbar) {
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    background-color: #ffffff;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: red;
+  }
+}

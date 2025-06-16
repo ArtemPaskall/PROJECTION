@@ -1,10 +1,13 @@
-import st from "./header.module.scss";
-import "@/app/styles/globals.scss";
-import Image from "next/image";
-import Link from "next/link";
-import MenuOpen from "../menu-open/page.jsx";
+"use client"
+import st from "./header.module.scss"
+import "@/app/styles/globals.scss"
+import Image from "next/image"
+import Link from "next/link"
+import MenuOpen from "../menu-open/page.jsx"
+import { useBackgroundContext } from "@/context/BackgroundContext"
 
 export default function Header() {
+  const { blurBackground, unBlurBackground } = useBackgroundContext()
   return (
     <>
       <div className={st["header"]}>
@@ -31,7 +34,11 @@ export default function Header() {
                   <li>
                     <Link href="/">PROJECTS</Link>
                   </li>
-                  <li className={st["menu-block-arrow"]}>
+                  <li
+                    className={st["menu-block-arrow"]}
+                    onMouseEnter={blurBackground}
+                    onMouseLeave={unBlurBackground}
+                  >
                     <Link href="/">ABOUT US</Link>
                     <Image
                       src="/arrow-menu.svg"
@@ -45,7 +52,11 @@ export default function Header() {
                       <Link href="/">Career Hub</Link>
                     </div>
                   </li>
-                  <li className={st["menu-block-arrow"]}>
+                  <li
+                    className={st["menu-block-arrow"]}
+                    onMouseEnter={blurBackground}
+                    onMouseLeave={unBlurBackground}
+                  >
                     <Link href="/">blog</Link>
                     <Image
                       src="/arrow-menu.svg"
@@ -88,5 +99,5 @@ export default function Header() {
         </div>
       </div>
     </>
-  );
+  )
 }

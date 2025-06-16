@@ -1,12 +1,12 @@
-"use client";
-import React from "react";
-import st from "./mobile-menu.module.scss";
-import Link from "next/link";
-import Image from "next/image";
-import { useMenu } from "@/context/MenuContext";
+"use client"
+import React from "react"
+import st from "./mobile-menu.module.scss"
+import Link from "next/link"
+import Image from "next/image"
+import { useMenu } from "@/context/MenuContext"
 
 export default function MobileMenu() {
-  const { isMenuOpen, closeMenu } = useMenu();
+  const { isMenuOpen, closeMenu } = useMenu()
 
   return (
     <div className={`${st["mobile-menu"]} ${isMenuOpen ? st.open : ""}`}>
@@ -50,5 +50,5 @@ export default function MobileMenu() {
         </ul>
       </nav>
     </div>
-  );
+  )
 }

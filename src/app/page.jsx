@@ -1,20 +1,26 @@
-"use client";
-import Header from "@/components/header/page.jsx";
-import MobileMenu from "@/components/mobile-menu/page.jsx";
-import Hero from "@/components/hero/page.jsx";
-import DarkBackground from "@/components/background/page.jsx";
-import WayWork from "@/components/way-work/page.jsx";
-import "./styles/globals.scss";
+"use client"
+import Header from "@/components/header/page.jsx"
+import MobileMenu from "@/components/mobile-menu/page.jsx"
+import Hero from "@/components/hero/page.jsx"
+import Background from "@/components/background/page.jsx"
+import WayWork from "@/components/way-work/page.jsx"
+import VideoBlock from "@/components/video-block/page.jsx"
+import FounderBlock from "@/components/founder-block/page.jsx"
+import CirclesBlock from "@/components/circles-block/page.jsx"
+import "./styles/globals.scss"
 
 export default function Home() {
   return (
-    <div>
+    <>
       <MobileMenu />
-      <DarkBackground />
       <Header />
-      <Hero />
-      <WayWork />
-      Hello world!
-    </div>
-  );
+      <Background>
+        <Hero />
+        <VideoBlock />
+        <FounderBlock />
+        <CirclesBlock />
+        <WayWork />
+      </Background>
+    </>
+  )
 }
