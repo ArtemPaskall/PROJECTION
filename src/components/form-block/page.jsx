@@ -41,7 +41,9 @@ export default function FormBlock() {
                   <input type="text" name="about" placeholder="About Project" />
                 </form>
               </div>
-              <div className={st["form-content-right"]}>asdfasfd</div>
+              <div className={st["form-content-right"]}>
+                <div>asdfasdf</div>
+              </div>
             </div>
           </div>
         </div>

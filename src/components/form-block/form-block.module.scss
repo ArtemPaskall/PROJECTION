@@ -39,5 +39,22 @@
   flex: 0 0 calc(60% - 20px);
 }
 .form-content-right {
+  position: relative;
   flex: 0 0 calc(40% - 20px);
+  background-image: url("../../../public/form-bg-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+.form-background-2 {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  z-index: 1;
+  width: 500px;
+  height: 450px;
+}
+.form-content-right-inner {
+  position: relative;
+  z-index: 20;
 }
