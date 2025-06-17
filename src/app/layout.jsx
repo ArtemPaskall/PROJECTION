@@ -7,7 +7,7 @@ import { BackgroundProvider } from "@/context/BackgroundContext"
 
 const manropeSans = Manrope({
   variable: "--font-manrope",
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 })
 

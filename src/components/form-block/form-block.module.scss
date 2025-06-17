@@ -1,9 +1,9 @@
+@use "../../app/styles/mixins.scss" as *;
 .form-block {
   background-color: #f9f9f9;
 }
 .form-block-gradient {
   color: #161616;
-  height: 700px;
   border-radius: 25px;
 
   background: url("/form-gradient.png");
@@ -13,10 +13,19 @@
 }
 .form-background {
   width: 100%;
+  height: 600px;
+
+  @media (max-width: 680px) {
+    height: 700px;
+  }
 }
 .form-block-background {
-  padding: 50px 0;
+  padding: 100px 0;
   position: relative;
+
+  @include mobile {
+    padding: 50px 0;
+  }
 }
 .form-header {
   font-weight: 700;
@@ -24,6 +33,11 @@
   font-size: clamp(32px, 3vw, 56px);
   line-height: 110%;
   color: #161616;
+  max-width: 35vw;
+
+  @media (max-width: 950px) {
+    max-width: initial;
+  }
 }
 .form-content {
   display: flex;
@@ -31,12 +45,28 @@
   align-items: flex-start;
   gap: 40px;
   position: absolute;
-  top: 50px;
+  top: 120px;
   padding: 25px;
   width: 100%;
+
+  @include mobile {
+    top: 50px;
+  }
 }
 .form-content-left {
-  flex: 0 0 calc(60% - 20px);
+  flex: 0 1 calc(60% - 20px);
+  position: relative;
+  top: 20px;
+
+  @media (max-width: 1250px) {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  @include mobile {
+    @include mobile {
+      flex: 0 0 100%;
+    }
+  }
 }
 .form-content-right {
   position: relative;
@@ -44,7 +74,16 @@
   background-image: url("../../../public/form-bg-2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 530px;
+  padding: 30px;
+
+  @media (max-width: 1250px) {
+    flex: 0 0 calc(50% - 20px);
+  }
+
+  @include mobile {
+    display: none;
+  }
 }
 .form-background-2 {
   position: absolute;
@@ -54,7 +93,175 @@
   width: 500px;
   height: 450px;
 }
-.form-content-right-inner {
-  position: relative;
-  z-index: 20;
+.send-form {
+  margin-top: 10px;
+}
+.send-form input {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #a2a2a2;
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  outline: none;
+
+  font-family: var(--font-manrope);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #a2a2a2;
+}
+.send-form input::placeholder {
+  font-family: var(--font-manrope);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.first-line-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+}
+.policy-text {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #a2a2a2;
+}
+.button-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
+  margin-top: 30px;
+
+  @media (max-width: 1150px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+.policy-green-text {
+  background: linear-gradient(
+    54.2deg,
+    #5cd6b3 3.08%,
+    #04b8c4 3.09%,
+    #4bfa8a 98.66%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+.form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  height: 70px;
+  border-radius: 166px;
+  background: linear-gradient(
+    54.2deg,
+    #0034ed 3.08%,
+    #04b8c4 49.92%,
+    #4bfa8a 98.66%
+  );
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.button-pen-img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+}
+.upwork-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 32.24px;
+}
+.upwork-img {
+  width: 56px;
+  height: 56px;
+}
+.our-text {
+  font-family: var(--font-baskerville);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 36px;
+  line-height: 32.24px;
+}
+.gray-line {
+  background-color: #a2a2a2;
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
+}
+.upwork-rate {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 10px;
+  background-color: #111215;
+  width: fit-content;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+.upwork-star {
+  width: 24px;
+  height: 24px;
+}
+.upwork-rate-value {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 140%;
+  color: #fff;
+}
+.upwork-text {
+  width: 90px;
+  height: 28px;
+}
+.upwork-text-2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+  color: #a2a2a2;
+  margin-top: 20px;
+}
+.upwork-text-2-black {
+  color: #161616;
+}
+.kingdom-wrapp {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 15px;
+  margin-top: 80px;
+
+  font-family: var(--font-manrope);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: -3%;
 }
