@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function FormBlock() {
   return (
-    <div className={st["form-block"]}>
+    <section className={st["form-block"]}>
       <div className={st["form-block-gradient"]}>
         <div className={"main-wrapp"}>
           <div className={st["form-block-background"]}>
@@ -117,6 +117,6 @@ export default function FormBlock() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

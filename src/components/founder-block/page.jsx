@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function FounderBlock() {
   return (
-    <>
+    <section>
       <div className={"main-wrapp"}>
         <div className={st["founder-wrapp"]}>
           <div className={st["founder-wrapp-left"]}>
@@ -57,6 +57,6 @@ export default function FounderBlock() {
           </div>
         </div>
       </div>
-    </>
+    </section>
   )
 }

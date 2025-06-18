@@ -9,7 +9,7 @@ import "swiper/css/pagination"
 
 export default function CirclesBlock() {
   return (
-    <>
+    <section>
       <div className="main-wrapp">
         <div className={st["circle-wrapp"]}>
           {["/circle1.svg", "/circle2.svg", "/circle3.svg", "/circle4.svg"].map(
@@ -56,6 +56,6 @@ export default function CirclesBlock() {
           </Swiper>
         </div>
       </div>
-    </>
+    </section>
   )
 }

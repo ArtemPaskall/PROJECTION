@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export default function WayWork() {
   return (
-    <div className={st["way-work"]}>
+    <section className={st["way-work"]}>
       <div className={"main-wrapp"}>
         <div className={st["way-work-wrapp"]}>
           <div className={st["way-work--left"]}>
@@ -52,6 +52,6 @@ export default function WayWork() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

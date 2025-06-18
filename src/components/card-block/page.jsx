@@ -11,7 +11,7 @@ export default function CardBlock() {
   const cards = ["/card1.svg", "/card2.svg", "/card3.svg", "/card4.svg"]
 
   return (
-    <div className={st["card-block"]}>
+    <section className={st["card-block"]}>
       <div className="main-wrapp">
         <div className={st["card-block-grid"]}>
           {cards.map((src, i) => (
@@ -52,6 +52,6 @@ export default function CardBlock() {
           ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   )
 }

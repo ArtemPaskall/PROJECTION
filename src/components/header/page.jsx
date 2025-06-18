@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <>
-      <div className={st["header"]}>
+      <header className={st["header"]}>
         <div className="main-wrapp">
           <div
             className={`${st["header-wrapp"]} ${
@@ -117,7 +117,7 @@ export default function Header() {
             </div>
           </div>
         </div>
-      </div>
+      </header>
     </>
   )
 }

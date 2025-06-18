@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <div className={st["footer"]}>
+    <footer className={st["footer"]}>
       <Image
         src={"/footer-gradient.png"}
         alt={`Footer Background`}
@@ -160,6 +160,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
