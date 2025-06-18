@@ -5,7 +5,7 @@ import Slider from "@/components/slider/page.jsx"
 
 export default function Hero() {
   return (
-    <div className={st["hero"]}>
+    <section className={st["hero"]}>
       <div className="main-wrapp">
         <div className={st["hero-wrapp"]}>
           <div className={st["hero-wrapp--left"]}>
@@ -123,6 +123,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

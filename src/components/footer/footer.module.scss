@@ -1,8 +1,218 @@
+@use "../../app/styles/mixins.scss" as *;
 .footer {
   background-color: #111;
   color: #fff;
-  // padding-top: 50px;
-  // position: relative;
-  // top: -100px;
-  // z-index: 1;
+  position: relative;
+  z-index: 1;
+}
+.footer-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 80%;
+  height: 120%;
+
+  @include mobile {
+    display: none;
+  }
+}
+.footer-gradient-mobile {
+  display: none;
+  position: absolute;
+
+  @include mobile {
+    display: block;
+    width: 100%;
+    height: 1000px;
+    top: 0px;
+  }
+}
+.footer-wrapp {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 20px;
+  position: relative;
+  z-index: 3;
+  padding: 50px 0 100px 0;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 80px;
+  }
+}
+.footer-header {
+  font-weight: 800;
+  font-size: clamp(64px, 8vw, 104px);
+  line-height: 96%;
+  text-transform: uppercase;
+  max-width: 500px;
+}
+.footer-wrapp-left {
+  flex: 0 0 calc(60% - 10px);
+  position: relative;
+}
+.footer-email {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 10px;
+  margin-top: 70px;
+  font-weight: 600;
+  font-size: clamp(16px, 3vw, 21px);
+  line-height: 100%;
+  border: 2px solid #fff;
+  width: fit-content;
+  border-radius: 266px;
+  padding: 16px;
+
+  @include mobile {
+    margin-top: 50px;
+  }
+}
+.footer-email-img {
+  width: 16px;
+  height: 19px;
+}
+.footer-bottom-text {
+  font-family: var(--font-manrope);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #ffffffcc;
+  text-decoration: none;
+
+  @include mobile {
+    display: none;
+  }
+}
+.footer-wrapp-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 0 0 calc(40% - 10px);
+
+  @include mobile {
+    flex-direction: column;
+    gap: 80px;
+  }
+}
+.footer-menu {
+  flex: 0 0 calc(40% - 10px);
+}
+.footer-social {
+  flex: 0 0 calc(60% - 10px);
+}
+.footer-vertical-alignment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 700px;
+
+  @include mobile {
+    height: initial;
+  }
+}
+.footer-header-small {
+  font-weight: 700;
+  font-size: clamp(16px, 3vw, 21px);
+  line-height: 133%;
+  text-transform: uppercase;
+  color: #ffffff66;
+}
+.footer-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+.footer-menu-list li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #efefef;
+}
+.footer-social-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+}
+.social-img {
+  width: 75px;
+  height: 75px;
+}
+.footer-social-list a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+
+  font-family: var(--font-manrope);
+  font-weight: 500;
+  font-size: clamp(24px, 2.3vw, 32px);
+  line-height: 133%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+}
+.footer-lets-discuss-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: linear-gradient(
+    54.2deg,
+    #5cd6b3 3.08%,
+    #04b8c4 3.09%,
+    #4bfa8a 98.66%
+  );
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 40px;
+  cursor: pointer;
+
+  position: absolute;
+  top: 60px;
+  left: 210px;
+
+  @include mobile {
+    display: flex;
+    position: static;
+    width: 185px;
+    height: 185px;
+  }
+}
+.footer-policy-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+.footer-bottom-text-mobile {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+.footer-copyright-mobile {
+  margin-top: 20px;
 }

@@ -1,0 +1,30 @@
+<svg width="76" height="76" viewBox="0 0 76 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-8" y="-8" width="92" height="92"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(4px);clip-path:url(#bgblur_0_2_3947_clip_path);height:100%;width:100%"></div></foreignObject><g data-figma-bg-blur-radius="8">
+<circle cx="38" cy="38" r="37.5" stroke="url(#paint0_radial_2_3947)" stroke-opacity="0.46"/>
+<circle cx="38" cy="38" r="37.5" stroke="url(#paint1_radial_2_3947)" stroke-opacity="0.33"/>
+<circle cx="38" cy="38" r="37.5" stroke="url(#paint2_radial_2_3947)"/>
+</g>
+<g clip-path="url(#clip1_2_3947)">
+<path d="M49.9972 50.0002L50.0032 49.9992V41.1972C50.0032 36.8912 49.0762 33.5742 44.0422 33.5742C41.6222 33.5742 39.9982 34.9022 39.3352 36.1612H39.2652V33.9762H34.4922V49.9992H39.4622V42.0652C39.4622 39.9762 39.8582 37.9562 42.4452 37.9562C44.9942 37.9562 45.0322 40.3402 45.0322 42.1992V50.0002H49.9972Z" fill="white"/>
+<path d="M26.3984 33.9766H31.3744V49.9996H26.3984V33.9766Z" fill="white"/>
+<path d="M28.882 26C27.291 26 26 27.291 26 28.882C26 30.473 27.291 31.791 28.882 31.791C30.473 31.791 31.764 30.473 31.764 28.882C31.763 27.291 30.472 26 28.882 26Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_2_3947_clip_path" transform="translate(8 8)"><circle cx="38" cy="38" r="37.5"/>
+</clipPath><radialGradient id="paint0_radial_2_3947" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(98.3341 168.718) rotate(-120.362) scale(216.494 112.531)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint1_radial_2_3947" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(-15.7432 -54.5512) rotate(50.6281) scale(164.255 87.4183)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_2_3947" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(40.2056 33.8497) rotate(138.023) scale(59.2742 44.0517)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#151515" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip1_2_3947">
+<rect width="24" height="24" fill="white" transform="translate(26 26)"/>
+</clipPath>
+</defs>
+</svg>
