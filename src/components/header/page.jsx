@@ -5,14 +5,34 @@ import Image from "next/image"
 import Link from "next/link"
 import MenuOpen from "../menu-open/page.jsx"
 import { useBackgroundContext } from "@/context/BackgroundContext"
+import { useEffect, useState } from "react"
 
 export default function Header() {
   const { blurBackground, unBlurBackground } = useBackgroundContext()
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
     <>
       <div className={st["header"]}>
         <div className="main-wrapp">
-          <div className={st["header-wrapp"]}>
+          <div
+            className={`${st["header-wrapp"]} ${
+              scrolled ? st["header-scrolled"] : ""
+            }`}
+          >
             <div className={st["header-wrapp-left"]}>
               <Link href={"/"}>
                 <Image
