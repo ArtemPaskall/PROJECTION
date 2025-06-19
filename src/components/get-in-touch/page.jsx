@@ -13,7 +13,6 @@ export default function GetInTouch() {
         isOpenModal ? st["visible"] : ""
       }`}
     >
-      {/* <div onClick={(e) => e.stopPropagation()}> */}
       <div className={"main-wrapp"}>
         <div className={st["form-block-background"]}>
           <Image
@@ -33,35 +32,31 @@ export default function GetInTouch() {
               onClick={closeModal}
             />
             <div className={st["form-content-left"]}>
-              <h2 className={st["form-header"]}>
+              <h2 className={st["touch-header"]}>
                 Ready to discuss your project with us?
               </h2>
+
+              <div className={st["touch-header-2"]}>Choose your industry</div>
+              <div className={st["industry-wrapp"]}>
+                <div className={st["industry-item"]}>Clothing</div>
+                <div className={st["industry-item"]}>Cosmetics</div>
+                <div className={st["industry-item"]}>B2B</div>
+                <div className={st["industry-item"]}>Electronics</div>
+                <div className={st["industry-item"]}>Other sectors</div>
+              </div>
+              <div
+                className={`${st["touch-header-2"]} ${st["touch-header-2-margin"]}`}
+              >
+                Contact me back at
+              </div>
               <form action="" method="post" className={st["send-form"]}>
-                <div className={st["first-line-wrapp"]}>
-                  <input
-                    type="text"
-                    name="full-name"
-                    required
-                    placeholder="Full Name*"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="E-mail*"
-                  />
-                </div>
-                <input type="text" name="link" placeholder="Link your store" />
-                <input type="text" name="about" placeholder="About Project" />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Your E-mail"
+                />
                 <div className={st["button-wrapp"]}>
-                  <div className={st["policy-text"]}>
-                    By sending this form I confirm that I have read and accept
-                    the{" "}
-                    <span className={st["policy-green-text"]}>
-                      {" "}
-                      Privacy Policy
-                    </span>{" "}
-                  </div>
                   <button type="submit" className={st["form-button"]}>
                     Send a massage{" "}
                     <Image
@@ -72,6 +67,30 @@ export default function GetInTouch() {
                       className={st["button-pen-img"]}
                     />
                   </button>
+                  <div className={st["callback-wrapp"]}>
+                    <Image
+                      src={"/arrow-callback.svg"}
+                      alt={`Form Background`}
+                      width={56}
+                      height={56}
+                      className={st["upwork-img"]}
+                    />
+                    <div className={st["callback-text"]}>
+                      Or you can
+                      <span className={st["callback-text-bold"]}>
+                        {" "}
+                        Book a Free Demo Call{" "}
+                      </span>
+                      at convenient time
+                    </div>
+                  </div>
+                </div>
+                <div className={st["policy-text"]}>
+                  By sending this form I confirm that I have read and accept the{" "}
+                  <span className={st["policy-green-text"]}>
+                    {" "}
+                    Privacy Policy
+                  </span>{" "}
                 </div>
               </form>
             </div>
@@ -127,42 +146,6 @@ export default function GetInTouch() {
           </div>
         </div>
       </div>
-      {/* </div> */}
     </section>
   )
 }
-
-// "use client"
-// import { useModal } from "@/context/GetInTouch"
-// import st from "./get-in-touch.module.scss"
-// import Image from "next/image"
-
-// export default function GetInTouch() {
-//   const { isOpenModal, close } = useModal()
-
-//   return (
-//     <section
-//       className={`${st["get-in-touch-block"]} ${isOpenModal ? st["visible"] : ""}`}
-//       onClick={close}
-//     >
-//       <div
-//         className={st["form-block-gradient"]}
-//         onClick={(e) => e.stopPropagation()}
-//       >
-//         {/* Весь твій вміст залишаємо без змін */}
-//         <div className={"main-wrapp"}>
-//           <div className={st["form-block-background"]}>
-//             <Image
-//               src={"/form-bg-1.png"}
-//               alt={`Form Background`}
-//               width={300}
-//               height={500}
-//               className={st["form-background"]}
-//             />
-//             <div className={st["form-content"]}>{/* ... */}</div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
