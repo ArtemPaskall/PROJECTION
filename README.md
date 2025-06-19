@@ -4,7 +4,7 @@ This is a test assignment built using [Next.js](https://nextjs.org/).
 
 ## Demo
 
-Check out the live demo of the project [here](https://projection-zeta.vercel.app).
+Check out the live demo of the project (deployed on Vercel) [here](https://projection-zeta.vercel.app).
 
 ## 🛠 Tech Stack
 
