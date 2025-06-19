@@ -111,16 +111,14 @@ export default function Header() {
                 />
               </button>
             </div>
-            <div
-              className={st["header-wrapp-right--mobile"]}
-              onClick={openModal}
-            >
+            <div className={st["header-wrapp-right--mobile"]}>
               <Image
                 src={"/lets-talk.svg"}
                 alt="Lets Talk Image"
                 width={32}
                 height={32}
                 className={st["lets-talk-image--mobile"]}
+                onClick={openModal}
               />
               <MenuOpen />
             </div>

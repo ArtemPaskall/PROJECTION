@@ -1,8 +1,24 @@
 import "@/app/styles/globals.scss"
 import st from "./form-block.module.scss"
 import Image from "next/image"
+import { useState } from "react"
 
 export default function FormBlock() {
+  const [errors, setErrors] = useState({ name: false, email: false })
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    const name = form["full-name"].value.trim()
+    const email = form["email"].value.trim()
+
+    const newErrors = {
+      name: name === "",
+      email: email === "" || !/^\S+@\S+\.\S+$/.test(email),
+    }
+
+    setErrors(newErrors)
+  }
   return (
     <section className={st["form-block"]}>
       <div className={st["form-block-gradient"]}>
@@ -20,19 +36,23 @@ export default function FormBlock() {
                 <h2 className={st["form-header"]}>
                   Ready to discuss your project with us?
                 </h2>
-                <form action="" method="post" className={st["send-form"]}>
+                <form
+                  onSubmit={handleSubmit}
+                  method="post"
+                  className={st["send-form"]}
+                >
                   <div className={st["first-line-wrapp"]}>
                     <input
                       type="text"
                       name="full-name"
-                      required
                       placeholder="Full Name*"
+                      className={errors.name ? st["input-error"] : ""}
                     />
                     <input
                       type="email"
                       name="email"
-                      required
                       placeholder="E-mail*"
+                      className={errors.email ? st["input-error"] : ""}
                     />
                   </div>
                   <input

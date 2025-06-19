@@ -10,9 +10,16 @@ export default function MobileMenu() {
 
   return (
     <div className={`${st["mobile-menu"]} ${isMenuOpen ? st.open : ""}`}>
+      <Image
+        src={"/footer-gradient.png"}
+        alt="close menu"
+        width={25}
+        height={25}
+        className={st["mobile-menu-bg"]}
+      />
       <div className={st["menu-close"]}>
         <Image
-          src={"/cross.svg"}
+          src={"/white-cross.svg"}
           alt="close menu"
           width={25}
           height={25}

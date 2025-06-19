@@ -273,3 +273,11 @@
     margin-top: 60px;
   }
 }
+.input-error {
+  border-bottom: 1px solid red !important;
+  color: red;
+
+  &::placeholder {
+    color: rgba(255, 0, 0, 0.6);
+  }
+}
