@@ -10,12 +10,14 @@ import CirclesBlock from "@/components/circles-block/page.jsx"
 import CardBlock from "@/components/card-block/page.jsx"
 import FormBlock from "@/components/form-block/page.jsx"
 import Footer from "@/components/footer/page.jsx"
+import GetInTouch from "@/components/get-in-touch/page.jsx"
 
 import "./styles/globals.scss"
 
 export default function Home() {
   return (
     <>
+      <GetInTouch />
       <MobileMenu />
       <Header />
       <Background>

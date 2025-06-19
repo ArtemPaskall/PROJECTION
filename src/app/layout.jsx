@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./styles/globals.scss"
 import { MenuProvider } from "@/context/MenuContext"
 import { BackgroundProvider } from "@/context/BackgroundContext"
+import { GetInTouchProvider } from "@/context/GetInTouch"
 
 const manropeSans = Manrope({
   variable: "--font-manrope",
@@ -38,9 +39,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${manropeSans.variable} ${baskervilleSans.variable} ${interFont.variable}`}
       >
-        <BackgroundProvider>
-          <MenuProvider>{children}</MenuProvider>
-        </BackgroundProvider>
+        <GetInTouchProvider>
+          <BackgroundProvider>
+            <MenuProvider>{children}</MenuProvider>
+          </BackgroundProvider>
+        </GetInTouchProvider>
       </body>
     </html>
   )
