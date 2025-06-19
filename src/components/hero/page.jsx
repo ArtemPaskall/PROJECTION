@@ -2,8 +2,11 @@ import "@/app/styles/globals.scss"
 import st from "./hero.module.scss"
 import Image from "next/image"
 import Slider from "@/components/slider/page.jsx"
+import { useModal } from "@/context/GetInTouch"
 
 export default function Hero() {
+  const { openModal } = useModal()
+
   return (
     <section className={st["hero"]}>
       <div className="main-wrapp">
@@ -52,7 +55,11 @@ export default function Hero() {
                   </span>
                 </div>
                 <div className={st["button-wrapp"]}>
-                  <button type="button" className={st["green-button"]}>
+                  <button
+                    type="button"
+                    className={st["green-button"]}
+                    onClick={openModal}
+                  >
                     Free Strategy Call
                     <Image
                       src={"/button-image.svg"}

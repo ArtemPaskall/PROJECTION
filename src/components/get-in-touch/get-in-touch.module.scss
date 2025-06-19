@@ -1,17 +1,4 @@
 @use "../../app/styles/mixins.scss" as *;
-// .get-in-touch-block {
-//   display: block;
-//   background-color: #f9f9f9;
-//   z-index: 10000;
-//   top: 0;
-//   left: 0;
-//   padding-bottom: 100px;
-//   width: 100%;
-
-//   @include mobile {
-//     padding-bottom: 30px;
-//   }
-// }
 .form-block-gradient {
   color: #161616;
   background-color: #111;
@@ -280,7 +267,7 @@
   height: 100vh;
   overflow-y: auto;
   z-index: 9999;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #111;
 
   opacity: 0;
   pointer-events: none;
@@ -305,7 +292,15 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 10px;
+  top: -20px;
   right: 20px;
   cursor: pointer;
+
+  @include mobile {
+    top: 0px;
+  }
+
+  @media (max-width: 500px) {
+    right: 5px;
+  }
 }

@@ -6,9 +6,11 @@ import Link from "next/link"
 import MenuOpen from "../menu-open/page.jsx"
 import { useBackgroundContext } from "@/context/BackgroundContext"
 import { useEffect, useState } from "react"
+import { useModal } from "@/context/GetInTouch"
 
 export default function Header() {
   const { blurBackground, unBlurBackground } = useBackgroundContext()
+  const { openModal } = useModal()
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -94,7 +96,11 @@ export default function Header() {
               </nav>
             </div>
             <div className={st["header-wrapp-right"]}>
-              <button type="button" className={st["lets-talk-button"]}>
+              <button
+                type="button"
+                className={st["lets-talk-button"]}
+                onClick={openModal}
+              >
                 Let’s talk
                 <Image
                   src={"/lets-talk.svg"}
@@ -105,7 +111,10 @@ export default function Header() {
                 />
               </button>
             </div>
-            <div className={st["header-wrapp-right--mobile"]}>
+            <div
+              className={st["header-wrapp-right--mobile"]}
+              onClick={openModal}
+            >
               <Image
                 src={"/lets-talk.svg"}
                 alt="Lets Talk Image"
