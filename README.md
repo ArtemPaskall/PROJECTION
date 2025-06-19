@@ -2,6 +2,10 @@
 
 This is a test assignment built using [Next.js](https://nextjs.org/).
 
+## Demo
+
+Check out the live demo of the project [here](https://projection-zeta.vercel.app).
+
 ## 🛠 Tech Stack
 
 - Next.js
