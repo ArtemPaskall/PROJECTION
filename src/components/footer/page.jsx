@@ -2,8 +2,11 @@ import "@/app/styles/globals.scss"
 import st from "./footer.module.scss"
 import Image from "next/image"
 import Link from "next/link"
+import { useModal } from "@/context/GetInTouch"
 
 export default function Footer() {
+  const { openModal } = useModal()
+
   return (
     <footer className={st["footer"]}>
       <Image
@@ -31,6 +34,7 @@ export default function Footer() {
                 <button
                   type="button"
                   className={st["footer-lets-discuss-mobile"]}
+                  onClick={openModal}
                 >
                   <Image
                     src={"/lets-discuss.svg"}
