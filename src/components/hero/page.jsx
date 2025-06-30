@@ -84,7 +84,7 @@ export default function Hero() {
               <Slider />
               <div className={st["price-block"]}>
                 <Image
-                  src={"/slider-background.png"}
+                  src={"/slider-background2.png"}
                   alt="Hero"
                   width={30}
                   height={50}
