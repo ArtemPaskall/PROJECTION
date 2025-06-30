@@ -86,8 +86,8 @@ export default function Hero() {
                 <Image
                   src={"/slider-background2.png"}
                   alt="Hero"
-                  width={30}
-                  height={50}
+                  width={300}
+                  height={500}
                   className={st["slider-background-img"]}
                 />
                 <Image
